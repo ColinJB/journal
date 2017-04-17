@@ -3,7 +3,6 @@ var Entry = require('./../js/entry.js').entryModule;
 $(document).ready(function(){
   $('#inputForm').submit(function(event){
     event.preventDefault();
-    debugger;
     var input = $('#entry').val();
     var entry = new Entry(input);
     entry.assignInfo();
