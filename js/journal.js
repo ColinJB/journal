@@ -9,7 +9,7 @@ function Entry(input){
 
 var vowels = ["a","e","i","o","u"];
 
-Entry.prototype.assignArrays = function(){
+Entry.prototype.assignInfo = function(){
   this.array = this.input.split(" ");
   for (var i = 0; i < this.input.length; i++){
     var character = this.input.charAt(i).toLowerCase();
@@ -19,9 +19,6 @@ Entry.prototype.assignArrays = function(){
       this.arrayConsonants.push(character);
     }
   }
-}
-
-Entry.prototype.setTeaser = function(){
   var arrayTeaser = [];
   for(var i = 0; i < 8; i++){
     var word = this.array[i];
