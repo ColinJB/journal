@@ -1,7 +1,11 @@
+var Entry = require('./../js/entry.js').entryModule;
+
 $(document).ready(function(){
-  $('#button').submit(function(event){
+  $('#inputForm').submit(function(event){
     event.preventDefault();
-    var entry = new Entry($('#entry').val());
+    debugger;
+    var input = $('#entry').val();
+    var entry = new Entry(input);
     entry.assignInfo();
     var teaser = entry.getTeaser();
     var wordCount = entry.countWords();
